@@ -1,0 +1,13 @@
+name: Ping Bot
+
+on:
+  schedule:
+    - cron: '*/30 * * * *'  # Runs every 30 minutes
+
+jobs:
+  curl_request:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Curl GET request
+      run: curl -X GET https://pdf-thumbnail-api.onrender.com
